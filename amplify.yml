@@ -5,7 +5,7 @@ applications:
         preBuild:
           commands:
             - cd ../..
-            - npm i
+            - npm install
         build:
           commands:
             - npx nx run shell:build:production
@@ -23,7 +23,7 @@ applications:
         preBuild:
           commands:
             - cd ../..
-            - npm i
+            - npm install
         build:
           commands:
             - npx nx run business:build:production
@@ -41,7 +41,7 @@ applications:
         preBuild:
           commands:
             - cd ../..
-            - npm i
+            - npm install
         build:
           commands:
             - npx nx run personel:build:production
