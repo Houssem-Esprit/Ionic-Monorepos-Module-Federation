@@ -1,0 +1,41 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        build:
+          commands:
+            - npm install
+            - npx nx build shell
+      artifacts:
+        baseDirectory: ../../dist/apps/shell
+        files:
+          - '**/*'
+      cache:
+        paths: []
+    appRoot: apps/shell
+  - frontend:
+      phases:
+        build:
+          commands:
+            - npm install
+            - npx nx build business
+      artifacts:
+        baseDirectory: ../../dist/apps/business
+        files:
+          - '**/*'
+      cache:
+        paths: []
+    appRoot: apps/business
+  - frontend:
+      phases:
+        build:
+          commands:
+            - npm install
+            - npx nx build personel
+      artifacts:
+        baseDirectory: ../../dist/apps/personel
+        files:
+          - '**/*'
+      cache:
+        paths: []
+    appRoot: apps/personel
