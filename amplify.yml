@@ -2,43 +2,55 @@ version: 1
 applications:
   - frontend:
       phases:
-        build:
+        preBuild:
           commands:
             - cd ../..
-            - npm install
-            - npm run build shell
+            - npm i
+        build:
+          commands:
+            - npx nx run shell:build:production
+            - cd apps/shell
       artifacts:
         baseDirectory: ../../dist/apps/shell
         files:
           - '**/*'
       cache:
-        paths: []
+        paths:
+          - node_modules/**/*
     appRoot: apps/shell
   - frontend:
       phases:
-        build:
+        preBuild:
           commands:
             - cd ../..
-            - npm install
-            - npm run build business
+            - npm i
+        build:
+          commands:
+            - npx nx run business:build:production
+            - cd apps/business
       artifacts:
         baseDirectory: ../../dist/apps/business
         files:
           - '**/*'
       cache:
-        paths: []
+        paths:
+          - node_modules/**/*
     appRoot: apps/business
   - frontend:
       phases:
-        build:
+        preBuild:
           commands:
             - cd ../..
-            - npm install
-            - npm run build personel
+            - npm i
+        build:
+          commands:
+            - npx nx run personel:build:production
+            - cd apps/personel
       artifacts:
         baseDirectory: ../../dist/apps/personel
         files:
           - '**/*'
       cache:
-        paths: []
+        paths:
+          - node_modules/**/*
     appRoot: apps/personel
