@@ -5,6 +5,7 @@ applications:
         build:
           commands:
             - npm install
+            - cd ../..
             - npm run build shell
       artifacts:
         baseDirectory: ../../dist/apps/shell
@@ -18,6 +19,7 @@ applications:
         build:
           commands:
             - npm install
+            - cd ../..
             - npm run build business
       artifacts:
         baseDirectory: ../../dist/apps/business
@@ -31,6 +33,7 @@ applications:
         build:
           commands:
             - npm install
+            - cd ../..
             - npm run build personel
       artifacts:
         baseDirectory: ../../dist/apps/personel
