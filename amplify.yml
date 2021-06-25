@@ -4,8 +4,8 @@ applications:
       phases:
         build:
           commands:
-            - npm install
             - cd ../..
+            - npm install
             - npm run build shell
       artifacts:
         baseDirectory: ../../dist/apps/shell
@@ -18,8 +18,8 @@ applications:
       phases:
         build:
           commands:
-            - npm install
             - cd ../..
+            - npm install
             - npm run build business
       artifacts:
         baseDirectory: ../../dist/apps/business
@@ -32,8 +32,8 @@ applications:
       phases:
         build:
           commands:
-            - npm install
             - cd ../..
+            - npm install
             - npm run build personel
       artifacts:
         baseDirectory: ../../dist/apps/personel
