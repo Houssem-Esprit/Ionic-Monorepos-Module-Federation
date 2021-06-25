@@ -44,7 +44,7 @@ applications:
           commands:
             - git config --local core.ignorecase false
             - cd ../..
-            - npm install
+            - npm install --save
         build:
           commands:
             - npx nx run personel:build:production
