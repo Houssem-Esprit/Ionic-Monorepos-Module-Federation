@@ -5,7 +5,7 @@ applications:
         build:
           commands:
             - npm install
-            - npx nx build shell
+            - npm run build shell
       artifacts:
         baseDirectory: ../../dist/apps/shell
         files:
@@ -18,7 +18,7 @@ applications:
         build:
           commands:
             - npm install
-            - npx nx build business
+            - npm run build business
       artifacts:
         baseDirectory: ../../dist/apps/business
         files:
@@ -31,7 +31,7 @@ applications:
         build:
           commands:
             - npm install
-            - npx nx build personel
+            - npm run build personel
       artifacts:
         baseDirectory: ../../dist/apps/personel
         files:
