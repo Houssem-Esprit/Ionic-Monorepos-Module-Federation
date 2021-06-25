@@ -4,6 +4,7 @@ applications:
       phases:
         preBuild:
           commands:
+            - git config --local core.ignorecase false
             - cd ../..
             - npm install
         build:
@@ -22,6 +23,7 @@ applications:
       phases:
         preBuild:
           commands:
+            - git config --local core.ignorecase false
             - cd ../..
             - npm install
         build:
@@ -40,6 +42,7 @@ applications:
       phases:
         preBuild:
           commands:
+            - git config --local core.ignorecase false
             - cd ../..
             - npm install
         build:
